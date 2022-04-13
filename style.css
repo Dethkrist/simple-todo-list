@@ -1,0 +1,106 @@
+*{
+padding:  0;
+margin:  0;
+border:  0;
+}
+*,*:before, *:after{
+-moz-box-sizing:  border-box;
+-webkit-box-sizing:  border-box;
+box-sizing:  border-box;
+}
+:focus, :active{outline:  none;}
+a:focus,a:active{outline:  none;}
+nav,footer,header,aside{display:  block;}
+html,body {
+height:  100%;
+width:  100%;
+line-height: 1;
+font-size: 14px;
+-ms-text-size-adjust:  100%;
+-moz-text-size-adjust:  100%;
+-webkit-text-size-adjust:  100%;
+}
+input, button, textarea {font-family:  inherit;}
+input: ms-clear{display:  none;}
+button{cursor:  pointer;}
+button::-moz-focus-inner {padding:  0;border:  0;}
+a, a:visited{text-decoration:  none;}
+a:hover{text-decoration: none;}
+ul li{list-style:  none;}
+img{vertical-align:  top;}
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight:  400;}
+
+
+/* STYLE HERE */
+body {
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(29,253,209,1) 50%, rgba(252,176,69,1) 100%);
+    font-family: 'Montserrat Alternates', sans-serif;
+    padding: 15px;
+}
+h1 {
+    color: rgba(255, 255, 255, .75);
+    font-size: 60px;
+    font-weight: 700;
+    text-shadow: 7px 7px 5px rgba(255, 255, 255, 0.5);
+    margin: 50px 0px 50px 0px;
+}
+h2 {
+    margin: 40px 0px 40px 0px;
+    color: rgba(255, 255, 255, .75);
+    font-weight: 500;
+    font-style: italic;
+    font-size: 40px;
+    text-shadow: 2px 2px 5px grey;
+}
+.flex-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.add-todo-wrapper {
+    display: flex;
+}
+.input-wrapper {
+}
+.input-wrapper input {
+    min-height: 40px;
+    min-width: 500px;
+    background-color: rgba(247, 243, 243, .5);
+    border: 1px solid rgba(247, 243, 243, .5);
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px rgb(205, 204, 204);
+    padding: 0px 10px;
+    font-size: 20px;
+}
+.input-wrapper input:focus {
+
+    box-shadow: 0px 0px 15px rgb(113, 204, 227);
+}
+#description-task {
+
+}
+.button-wrapper {
+}
+.button-wrapper button {
+    margin: 0px 0px 0px 15px;
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: rgb(36, 161, 161); 
+    font-weight: 800;
+    background-color: rgba(255, 255, 255, .5);
+    box-shadow: 2px 2px 10px rgb(205, 204, 204);
+    min-height: 100%;
+}
+.button-wrapper button:hover {
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 15px rgb(113, 204, 227);
+}
+.button-wrapper button:active {
+    background-color: rgb(182, 249, 245);
+    box-shadow: 0px 0px 20px rgb(113, 204, 227);
+}
+.todos-wrapper {
+}
