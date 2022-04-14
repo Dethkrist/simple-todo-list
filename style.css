@@ -185,8 +185,11 @@ h2 {
 @keyframes opacity {
     from {
         opacity: 1;
+        transform: scale(100%);
     }
     to {
         opacity: 0;
+        transform: scale(90%);
     }
 }
+

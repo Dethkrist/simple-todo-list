@@ -24,9 +24,16 @@ const createTemplate = (task, index) => {
     `
 }
 
+const filterTasks = () => {
+    const activeTasks = tasks.length && tasks.filter(item => item.completed == false);
+    const completedTasks = tasks.length && tasks.filter(item => item.completed == true);
+    tasks = [...activeTasks, ...completedTasks];
+}
+
 const fillHtmlList = () => {
     todosWrapper.innerHTML = "";
     if (tasks.length > 0) {
+        filterTasks();
         tasks.forEach((item, index) => {
             todosWrapper.innerHTML += createTemplate(item, index); 
         });
@@ -54,8 +61,8 @@ const completeTask = index => {
 addTaskBtn.addEventListener('click', () => {
     if (deskTaskInput.value != "") {
     tasks.push(new Task(deskTaskInput.value));
-    updateLocal();
     fillHtmlList();
+    updateLocal();
     deskTaskInput.value = '';
     }
 })
@@ -68,3 +75,4 @@ const deleteTask = (index) => {
         fillHtmlList();
     }, 500)
 }
+
