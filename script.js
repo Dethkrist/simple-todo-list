@@ -18,7 +18,7 @@ const createTemplate = (task, index) => {
             <div class="description">${task.description}</div>
             <div class="buttons">
                 <input onclick="completeTask(${index})" type="checkbox" class="btn-complete" ${task.completed ? 'checked' : ''}>
-                <button class="btn-delete">Delete</button>
+                <button onclick="deleteTask(${index})" class="btn-delete">Delete</button>
             </div>
         </div>
     `
@@ -60,3 +60,11 @@ addTaskBtn.addEventListener('click', () => {
     }
 })
 
+const deleteTask = (index) => {
+    todoItemElems[index].classList.add('deletion');
+    setTimeout(() => {
+        tasks.splice(index, 1);
+        updateLocal();
+        fillHtmlList();
+    }, 500)
+}
